@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wandelen.Views.LoginPage">
+  
+    <ContentView.Content>
+        
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Log in"></Label>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Gebruikersnaam:" />
+                <Entry x:Name="Gebruikersnaam" Placeholder="Gebruikersnaam" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Wachtwoord:" />
+                <Entry x:Name="Wachtwoord" Placeholder="Wachtwoord" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Ingelogd blijven" />
+                <Switch IsToggled="True" />
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Inloggen"></Button>
+                <Button Text="Wachtwoord vergeten"></Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
