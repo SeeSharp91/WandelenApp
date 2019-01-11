@@ -1,31 +1,29 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Wandelen.Views.LoginPage">
-  
-    <ContentView.Content>
-        
-        <StackLayout>
+             x:Class="Wandelen.LoginPage">
+    <ContentPage.Content>
+
+        <StackLayout Margin="25">
             <StackLayout>
-                <Label Text="Log in"></Label>
+                <Label Text="Log in" Margin="4"></Label>
             </StackLayout>
             <StackLayout>
-                <Label Text="Gebruikersnaam:" />
                 <Entry x:Name="Gebruikersnaam" Placeholder="Gebruikersnaam" />
             </StackLayout>
             <StackLayout>
-                <Label Text="Wachtwoord:" />
-                <Entry x:Name="Wachtwoord" Placeholder="Wachtwoord" />
+                <Entry x:Name="Wachtwoord" Placeholder="Wachtwoord" IsPassword="true" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Ingelogd blijven" HorizontalOptions="StartAndExpand" Margin="4" />
+                <Switch IsToggled="True" HorizontalOptions="End"/>
             </StackLayout>
             <StackLayout>
-                <Label Text="Ingelogd blijven" />
-                <Switch IsToggled="True" />
-            </StackLayout>
-            <StackLayout>
-                <Button Text="Inloggen"></Button>
-                <Button Text="Wachtwoord vergeten"></Button>
+                <Button x:Name="Inloggen" Text="Inloggen" Pressed="Inloggen_Pressed" Clicked="Inloggen_Clicked" />
+                <Button Text="Wachtwoord vergeten" />
             </StackLayout>
 
         </StackLayout>
-    </ContentView.Content>
-</ContentView>
+        
+    </ContentPage.Content>
+</ContentPage>

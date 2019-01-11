@@ -7,14 +7,24 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Wandelen.Views
+namespace Wandelen
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginPage : ContentView
+	public partial class LoginPage : ContentPage
 	{
 		public LoginPage ()
 		{
 			InitializeComponent ();
 		}
+
+        private void Inloggen_Pressed(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void Inloggen_Clicked(object sender, EventArgs e)
+        {
+            //
+        }
 	}
 }
