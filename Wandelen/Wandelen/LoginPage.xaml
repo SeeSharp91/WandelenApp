@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Wandelen.LoginPage">
+             x:Class="Wandelen.LoginPage"
+             x:Class="Styles.App">
+    
     <ContentPage.Content>
 
         <StackLayout Margin="25">
             <StackLayout>
                 <Label Text="Geniet van de nieuwe wandel app. Als u inlogt dan kunt u gebruik maken van alle functionaliteiten die deze app te bieden heeft.
-                             Als u beslist om neit in te loggen dan kun je alleen maar een beperkt aantal routes lopen en andere functionaliteiten zijn niet
+                             Als u beslist om niet in te loggen dan kun je alleen maar een beperkt aantal routes lopen en andere functionaliteiten zijn niet
                              Beschikbaar." Margin="4"></Label>
             </StackLayout>
             <StackLayout>
