@@ -18,7 +18,7 @@ namespace Wandelen
 
         private void Inloggen_Clicked(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new HomePage());
+            Navigation.PushAsync(new HomePage());
         }
 
         private void WachtwoordVergeten_Clicked(object sender, EventArgs e)
