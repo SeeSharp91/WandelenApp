@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Wandelen
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class KaartPage : ContentPage
+    public partial class HomePage : TabbedPage
     {
-        public KaartPage ()
+        public HomePage ()
         {
             InitializeComponent();
         }

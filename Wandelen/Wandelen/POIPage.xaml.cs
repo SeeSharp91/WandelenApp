@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace Wandelen
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class POIPage : TabbedPage
+    public partial class POIPage : ContentPage
     {
         public POIPage ()
         {
