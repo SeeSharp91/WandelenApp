@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wandelen.iOS", "Wandelen\Wa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wandelen.UWP", "Wandelen\Wandelen.UWP\Wandelen.UWP.csproj", "{E7E52F25-B516-4036-A07A-F1D6D51C5DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wandelen", "Wandelen\Wandelen\Wandelen.csproj", "{D3C69F56-C96E-42B5-86C9-713C45BA99C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wandelen", "Wandelen\Wandelen\Wandelen.csproj", "{D3C69F56-C96E-42B5-86C9-713C45BA99C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -148,7 +148,6 @@ Global
 		{44E48335-E3AB-4388-B6D9-8044EEC75BE9}.AppStore|x86.Build.0 = AppStore|iPhone
 		{44E48335-E3AB-4388-B6D9-8044EEC75BE9}.AppStore|x86.Deploy.0 = AppStore|iPhone
 		{44E48335-E3AB-4388-B6D9-8044EEC75BE9}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{44E48335-E3AB-4388-B6D9-8044EEC75BE9}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{44E48335-E3AB-4388-B6D9-8044EEC75BE9}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{44E48335-E3AB-4388-B6D9-8044EEC75BE9}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{44E48335-E3AB-4388-B6D9-8044EEC75BE9}.Debug|ARM.Build.0 = Debug|iPhone
