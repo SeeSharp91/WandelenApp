@@ -3,20 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Wandelen"
              x:Class="Wandelen.RoutePage">
-    <StackLayout Margin="20">
+    <StackLayout Margin="10">
         <!-- Set ListView.SelectionMode to None to disable selection -->
-        <ListView ItemsSource="{x:Static local:RoutePage.items}" ItemSelected="OnSelection" ItemTapped="OnTap" IsPullToRefreshEnabled="true" Refreshing="OnRefresh">
+        <ListView ItemsSource="{x:Static local:RoutePage.items}" ItemSelected="OnSelection" IsPullToRefreshEnabled="true" Refreshing="OnRefresh">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.ContextActions>
-                            <!-- CommandParameter is the command to pass to the clicked event handler. Because these are menu items, 
-                            not cells managed by the ListView, CommandParameter is neccesary to determine which 
-                            cell the context action was taken on. -->
-                            <MenuItem Clicked="OnMore" Text="More" CommandParameter="{Binding .}" />
-                            <MenuItem Clicked="OnDelete" Text="Delete" IsDestructive="true" CommandParameter="{Binding .}" />
+                            <MenuItem Clicked="GaNaarKaart" Text="Nieuwe route" CommandParameter="{Binding .}" />
                         </ViewCell.ContextActions>
-                        <StackLayout Padding="15,0">
+                        <StackLayout Padding="10,0,0,0">
                             <Label Text="{Binding .}" />
                         </StackLayout>
                     </ViewCell>

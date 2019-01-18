@@ -17,15 +17,11 @@ namespace Wandelen
         public static ObservableCollection<string> items { get; set; }
         public RoutePage()
         {
-            items = new ObservableCollection<string>() { "Route Samenstellen", "Voorgestelde Routen", "Mijn Routes" };
+            items = new ObservableCollection<string>() { "Route Samenstellen", "Voorgestelde Routes", "Mijn Routes" };
             InitializeComponent();
         }
         void OnSelection(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem == null)
-            {
-                return;
-            }
             DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
         }
 
@@ -42,22 +38,10 @@ namespace Wandelen
             //make sure to end the refresh state
             list.IsRefreshing = false;
         }
-
-        void OnTap(object sender, ItemTappedEventArgs e)
-        {
-            DisplayAlert("Item Tapped", e.Item.ToString(), "Ok");
-        }
-
-        void OnMore(object sender, EventArgs e)
+        void GaNaarKaart(object sender, EventArgs e)
         {
             var item = (MenuItem)sender;
-            DisplayAlert("More Context Action", item.CommandParameter + " more context action", "OK");
-        }
-
-        void OnDelete(object sender, EventArgs e)
-        {
-            var item = (MenuItem)sender;
-            items.Remove(item.CommandParameter.ToString());
+            Navigation.PushAsync(new KaartPage());
         }
     }
 }
