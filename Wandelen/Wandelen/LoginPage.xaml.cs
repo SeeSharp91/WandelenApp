@@ -1,6 +1,7 @@
-﻿using Android.Widget;
+﻿//using Android.Widget;
 using System;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 
 namespace Wandelen
@@ -30,16 +31,16 @@ namespace Wandelen
 
         private void OnthoudenGebruiker_Switch_Toggled(object sender, ToggledEventArgs e)
         {
-            if (IsToggled == true)
-            {
-                //string RememberMe = "Uw naam wordt onthouden";
-                Toast.MakeText(Android.App.Application.Context, "Uw naam wordt onthouden!", ToastLength.Long).Show();
-            }
-            else
-            {
-                //string ForgetMe = "U bent vergeten";
-                Toast.MakeText(Android.App.Application.Context, "U bent vergeten", ToastLength.Long).Show();
-            }
+        //    if (IsToggled == true)
+        //    {
+        //        //string RememberMe = "Uw naam wordt onthouden";
+        //        Toast.MakeText(Android.App.Application.Context, "Uw naam wordt onthouden!", ToastLength.Long).Show();
+        //    }
+        //    else
+        //    {
+        //        //string ForgetMe = "U bent vergeten";
+        //        Toast.MakeText(Android.App.Application.Context, "U bent vergeten", ToastLength.Long).Show();
+        //    }
         }
     }
 }
