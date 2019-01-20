@@ -47,3 +47,13 @@ longtitude FLOAT,
 latitude FLOAT
 );
 
+CREATE TABLE Route(
+entryId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+route_id INT, 
+stop_id INT,
+lat DECIMAL(10,7), 
+long DECIMAL(10,7), 
+difficulty VARCHAR(50),    
+city VARCHAR(20)
+ );
+

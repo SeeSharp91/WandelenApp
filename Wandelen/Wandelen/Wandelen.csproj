@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="SQLite.Net-PCL" Version="3.1.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1009999" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="3.4.0.1009999" />
@@ -40,7 +41,13 @@
     <EmbeddedResource Update="POIPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="previewRoute.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="RoutePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="voorgesteldeRoutes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
