@@ -19,6 +19,7 @@ namespace Wandelen
         {
             items = new ObservableCollection<string>() { "Route Samenstellen", "Voorgestelde Routes", "Mijn Routes" };
             InitializeComponent();
+            //Misschien gebruik maken van buttons?
         }
         void OnSelection(object sender, SelectedItemChangedEventArgs e)
         {
