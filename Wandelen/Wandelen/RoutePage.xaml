@@ -5,25 +5,8 @@
              x:Class="Wandelen.RoutePage">
     <StackLayout Margin="10">
         <!-- Set ListView.SelectionMode to None to disable selection -->
-        <ListView ItemsSource="{x:Static local:RoutePage.items}" ItemSelected="OnSelection" IsPullToRefreshEnabled="true" Refreshing="OnRefresh">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.ContextActions>
-                            <MenuItem Clicked="GaNaarKaart" Text="Nieuwe route" CommandParameter="{Binding .}" />
-                        </ViewCell.ContextActions>
-                        <StackLayout Padding="10,0,0,0">
-                            <Label Text="{Binding .}" />
-                            <Button Margin="0,20,0,0" x:Name="VoorgesteldeRoutes" Clicked="VoorgesteldeRoutes_Click" Text="Ga naar voorgestelde routes" />
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
         <Button Text="Voorgestelde routes" Clicked="voorgestelderoutes_clicked"/>
+        <Button x:Name="RouteMaken" Text="Route Maken" Clicked="RouteMaken_Clicked"  Margin="0,2,0,0"/>
+        <Button x:Name="RouteKiezen" Text="Route Kiezen" Clicked="RouteKiezen_Clicked"  Margin="0,2,0,0"/>
     </StackLayout>
-
-
-
-
 </ContentPage>
