@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Wandelen.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
@@ -23,8 +23,20 @@ namespace Wandelen
         }
         void OnSelection(object sender, SelectedItemChangedEventArgs e)
         {
-            DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
+           DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
         }
+
+        void VoorgesteldeRoutes_Click(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new voorgesteldeRoutes());
+        }
+
+        private void voorgestelderoutes_clicked(object sender, EventArgs e)
+        {
+            var routepagina = new voorgesteldeRoutes();
+            Navigation.PushAsync(routepagina);
+        }
+
 
         void OnRefresh(object sender, EventArgs e)
         {
