@@ -4,21 +4,6 @@
              x:Class="Wandelen.voorgesteldeRoutes">
     <ContentPage.Content>
         <StackLayout Margin="10">
-            <!--Niet geïmplementeerd wegens tijdgebrek-->
-        
-            <!-- Set ListView.SelectionMode to None to disable selection --><!--
-            <ListView x:Name="voorgesteldeRoutesListView" ItemSelected="OnItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" />
-                                --><!--<Image Source="check.png" IsVisible="{Binding Done}" />--><!--
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>-->
             <Button Margin="0,20,0,0" Text="Route 1: Van Brunssum naar Schinveld" Clicked="btn_route_een_Clicked" IsVisible="True"/>
             <Button Margin="0,20,0,20" Text="Route 2: Een wandeling over de Brunssummerheide" Clicked="btn_route_twee_Clicked" IsVisible="True"/>
             <ContentView x:Name="route1" IsVisible="False">
@@ -29,8 +14,7 @@
             </ContentView>
             <ContentView x:Name="btnOpslaanView" IsVisible="False">
                 <Button BackgroundColor="#3399ff" Text="Route offline opslaan" Clicked="btn_route_opslaan_Clicked" />
-            </ContentView>
-        
+            </ContentView>        
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
