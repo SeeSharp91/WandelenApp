@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Wandelen"
              x:Class="Wandelen.RoutePage">
-    <StackLayout Margin="10">
+    <StackLayout Margin="10" BackgroundColor="AliceBlue">
         <!-- Set ListView.SelectionMode to None to disable selection -->
-        <Button Text="Voorgestelde routes" Clicked="voorgestelderoutes_clicked"/>
-        <Button x:Name="RouteMaken" Text="Route Maken" Clicked="RouteMaken_Clicked"  Margin="0,2,0,0"/>
-        <Button x:Name="RouteKiezen" Text="Route Kiezen" Clicked="RouteKiezen_Clicked"  Margin="0,2,0,0"/>
+        <Button Text="Voorgestelde routes" Clicked="voorgestelderoutes_clicked"
+                BackgroundColor="LightBlue" Margin="0,2,0,0"/>
+        <Button x:Name="RouteMaken" Text="Route Maken" Clicked="RouteMaken_Clicked"  
+                BackgroundColor="LightBlue" Margin="0,2,0,0"/>
+        <Button x:Name="RouteKiezen" Text="Route Kiezen" Clicked="RouteKiezen_Clicked"  
+                BackgroundColor="LightBlue" Margin="0,2,0,0"/>
     </StackLayout>
 </ContentPage>

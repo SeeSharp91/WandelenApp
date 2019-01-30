@@ -4,16 +4,21 @@
              x:Class="Wandelen.voorgesteldeRoutes">
     <ContentPage.Content>
         <StackLayout Margin="10">
-            <Button Margin="0,20,0,0" Text="Route 1: Van Brunssum naar Schinveld" Clicked="btn_route_een_Clicked" IsVisible="True"/>
-            <Button Margin="0,20,0,20" Text="Route 2: Een wandeling over de Brunssummerheide" Clicked="btn_route_twee_Clicked" IsVisible="True"/>
+            <Button Text="Route 1: Van Brunssum naar Schinveld" Clicked="btn_route_een_Clicked" 
+                    IsVisible="True" BackgroundColor="LightBlue" Margin="0,20,0,0"/>
+            <Button Margin="0,20,0,20" Text="Route 2: Een wandeling over de Brunssummerheide" Clicked="btn_route_twee_Clicked" 
+                    IsVisible="True" BackgroundColor="LightBlue"/>
             <ContentView x:Name="route1" IsVisible="False">
-                <Button BackgroundColor="#3399ff" Margin="0,0,0,10" Text="Start route 1" Clicked="route_een_clicked"/>
+                <Button Text="Start route 1" Clicked="route_een_clicked"
+                        BackgroundColor="LightBlue" Margin="0,0,0,10"/>
             </ContentView>
             <ContentView x:Name="route2" IsVisible="False">
-                <Button BackgroundColor="#3399ff" Margin="0,0,0,10" Text="Start route 2" Clicked="route_twee_clicked" />
+                <Button  Text="Start route 2" Clicked="route_twee_clicked"
+                         BackgroundColor="LightBlue" Margin="0,0,0,10" />
             </ContentView>
             <ContentView x:Name="btnOpslaanView" IsVisible="False">
-                <Button BackgroundColor="#3399ff" Text="Route offline opslaan" Clicked="btn_route_opslaan_Clicked" />
+                <Button Text="Route offline opslaan" Clicked="btn_route_opslaan_Clicked"
+                        BackgroundColor="LightBlue"/>
             </ContentView>        
         </StackLayout>
     </ContentPage.Content>
