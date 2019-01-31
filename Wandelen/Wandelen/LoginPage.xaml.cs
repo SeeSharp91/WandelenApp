@@ -1,46 +1,118 @@
-﻿//using Android.Widget;
+﻿using SQLite;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Linq;
+using Wandelen.Models;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
+
 using Xamarin.Forms.Xaml;
+
 
 namespace Wandelen
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LoginPage : ContentPage
-	{
-        public bool IsToggled { get; set; }
+    {
 
-
-        public LoginPage ()
-		{
-			InitializeComponent ();
-		}
-
-        private void Inloggen_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new HomePage());
-        }
-
-        private void WachtwoordVergeten_Clicked(object sender, EventArgs e)
-        {
-            //
-        }
-
+        // initialiseren benodigde elementen
+        private Entry _emailEntry;
+        private Entry _wachtwoordEntry;
+        private Button _loginButton;
+        private Button _accountAanmakenButton;
+        private Button testb;
+        //Database locatie
+        string _dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "WandelappDB.db3");
         
-
-        private void OnthoudenGebruiker_Switch_Toggled(object sender, ToggledEventArgs e)
+        public LoginPage()
         {
-        //    if (IsToggled == true)
-        //    {
-        //        //string RememberMe = "Uw naam wordt onthouden";
-        //        Toast.MakeText(Android.App.Application.Context, "Uw naam wordt onthouden!", ToastLength.Long).Show();
-        //    }
-        //    else
-        //    {
-        //        //string ForgetMe = "U bent vergeten";
-        //        Toast.MakeText(Android.App.Application.Context, "U bent vergeten", ToastLength.Long).Show();
-        //    }
+            InitializeComponent();
+            //nieuw stacklayout object instantiëren
+            this.Title = "Wandel App";
+            StackLayout stacklayout = new StackLayout();
+
+            //email entry
+            _emailEntry = new Entry();
+            _emailEntry.Keyboard = Keyboard.Email;
+            _emailEntry.Placeholder = "E-mail adres";
+            stacklayout.Children.Add(_emailEntry);
+
+            //wachtwoord entry
+            _wachtwoordEntry = new Entry();
+            _wachtwoordEntry.Keyboard = Keyboard.Text;
+            _wachtwoordEntry.IsPassword = true;
+            _wachtwoordEntry.Placeholder = "Wachtwoord";
+            stacklayout.Children.Add(_wachtwoordEntry);
+
+            //login button 
+            _loginButton = new Button();
+            _loginButton.Text = "Log in";
+            _loginButton.Clicked += _loginButton_Clicked;
+            stacklayout.Children.Add(_loginButton);
+
+            //account aanmaken button
+            _accountAanmakenButton = new Button();
+            _accountAanmakenButton.Text = "Account aanmaken";
+            _accountAanmakenButton.Clicked += _accountAanmakenButton_Clicked;
+            stacklayout.Children.Add(_accountAanmakenButton);
+
+            testb = new Button();
+            testb.Text = "testb";
+            testb.Clicked += testb_Clicked;
+            stacklayout.Children.Add(testb);
+
+            //geef de content weer
+            Content = stacklayout;
+        }
+
+        //inloggen logica
+        private async void _loginButton_Clicked(object sender, EventArgs e)
+        {
+            Wandelaar wandelaar = new Wandelaar();
+
+            if (_emailEntry.Text != wandelaar.email && _wachtwoordEntry.Text != wandelaar.wachtwoord)
+            {
+                await Navigation.PushAsync(new HomePage());
+            }
+            else
+            {
+                await DisplayAlert("Ongeldige gegevens probeer het opnieuw!", "test", "ok");
+            }
+
+        }
+        
+        //Verifiëren van gegevens
+        public bool Do_Login(string email, string wachtwoord)
+        {
+            Wandelaar wandelaar = new Wandelaar();
+            string query = "Select Count(*) FROM wandelaar WHERE email='" + email + "' AND wachtwoord='" + wachtwoord + "'";
+
+            using (SQLiteConnection conn = new SQLiteConnection(_dbPath))
+            {
+                SQLiteCommand cmd = new SQLiteCommand(conn);
+                cmd.CommandText = query;
+                var count = cmd.ExecuteScalar<int>();
+                if (count > 0)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+        }
+
+        //account aanmaken scherm oproepen
+        private void _accountAanmakenButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AccountPage());
+        }
+
+        //knop om te kijken of entries (nieuwe accounts) daadwerkelijk aangemaakt worden - wordt verwijderd bij oplevering
+        private void testb_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new test());
         }
     }
 }
