@@ -1,30 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Wandelen.LoginPage">            
-
-    <ContentPage.Content>
-
-        <StackLayout Margin="25">
-            <StackLayout HorizontalOptions="StartAndExpand">
-                <Label x:Name="WelkomTekst" Text="Geniet van de nieuwe wandel app. 
-                       Als u inlogt dan kunt u gebruik maken van alle functionaliteiten die deze app te bieden heeft.
-                       Als u beslist om niet in te loggen dan kun je alleen maar een beperkt aantal routes lopen en andere functionaliteiten zijn niet beschikbaar." 
-                       Margin="4"/>
-                <Entry x:Name="EmailAdres" Placeholder="Emailadres" Keyboard="Email"/>
-                <Entry x:Name="Wachtwoord" Placeholder="Wachtwoord" IsPassword="true" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Ingelogd blijven" HorizontalOptions="StartAndExpand" Margin="4" />
-                <Switch x:Name="Onthouden" HorizontalOptions="End" Toggled="OnthoudenGebruiker_Switch_Toggled" />
-            </StackLayout>
-            <StackLayout HorizontalOptions="FillAndExpand">
-                <Button x:Name="Inloggen" Text="Inloggen" 
-                        Clicked="Inloggen_Clicked" BackgroundColor="LightBlue" />
-                <Button x:Name="WachtwoordVergeten" Text="Wachtwoord vergeten" 
-                        Clicked="WachtwoordVergeten_Clicked" BackgroundColor="LightBlue"/>
-            </StackLayout>
-        </StackLayout>
-        
-    </ContentPage.Content>
+             x:Class="Wandelen.LoginPage">
 </ContentPage>

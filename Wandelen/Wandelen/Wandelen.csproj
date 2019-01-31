@@ -14,9 +14,12 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
     <PackageReference Include="SQLite.Net-PCL" Version="3.1.1" />
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1009999" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="3.4.0.1009999" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1029999" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="3.4.0.1029999" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,9 +30,6 @@
 
   <ItemGroup>
     <EmbeddedResource Update="AccountPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="EigenRoutePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="HomePage.xaml">
@@ -47,10 +47,10 @@
     <EmbeddedResource Update="routeEen.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="RoutePage.xaml">
+    <EmbeddedResource Update="previewRoute.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="RouteTwee.xaml">
+    <EmbeddedResource Update="RoutePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="voorgesteldeRoutes.xaml">
