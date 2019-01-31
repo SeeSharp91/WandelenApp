@@ -33,7 +33,7 @@ namespace Wandelen
 
         private void RouteMaken_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new KaartPage());
+            Navigation.PushAsync(new EigenRoutePage());
         }
     }
 }
