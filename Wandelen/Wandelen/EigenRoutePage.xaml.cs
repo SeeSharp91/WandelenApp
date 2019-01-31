@@ -102,5 +102,20 @@ namespace Wandelen
             var span = new Xamarin.Forms.Maps.MapSpan(center, 1, 1);
             locationsMap.MoveToRegion(span);
         }
+
+        private void StartRoute_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StopRoute_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Opslaan_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new OpslaanRoutePage());
+        }
     }
 }

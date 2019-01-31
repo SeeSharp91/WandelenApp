@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Wandelen.Data;
+using SQLite.Net.Interop;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Wandelen
@@ -9,6 +10,9 @@ namespace Wandelen
     public partial class App : Application
     {
         public static RouteItemsManager RouteManager { get; private set; }
+        public static ISQLitePlatform DatabaseLocation { get; internal set; }
+        public static string DBLocation = string.Empty;
+
         public static double ScreenHeight;
         public static double ScreenWidth;
 

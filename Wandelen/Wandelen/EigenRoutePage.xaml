@@ -9,13 +9,13 @@
                 <maps:Map x:Name="locationsMap" HeightRequest="350" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
             </StackLayout>
             <StackLayout VerticalOptions="End">
-                <Button x:Name="StartRoute" Text="Start Route" 
+                <Button x:Name="StartRoute" Text="Start Route" Clicked="StartRoute_Clicked" 
                         HorizontalOptions="FillAndExpand"
                         BackgroundColor="LightBlue"/>
-                <Button x:Name="StopRoute"  Text="Stop Route" 
+                <Button x:Name="StopRoute"  Text="Stop Route" Clicked="StopRoute_Clicked" 
                         HorizontalOptions="FillAndExpand"
                         BackgroundColor="LightBlue"/>
-                <Button x:Name="Opslaan"  Text="Opslaan" 
+                <Button x:Name="btnOpslaan"  Text="Opslaan" Clicked="Opslaan_Clicked"
                         HorizontalOptions="FillAndExpand"
                         BackgroundColor="LightBlue"/>
             </StackLayout>

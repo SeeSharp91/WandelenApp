@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wandelen.OpslaanRoutePage">
+    <StackLayout>
+        <StackLayout>
+            <Label x:Name="lbRouteNaam" Text="Geef uw route een naam:"/>
+            <Entry x:Name="eRouteNaam" Text="{Binding route_naam}"/>
+        </StackLayout>
+        <StackLayout>
+            <Label x:Name="lbReview" Text="Geef hier uw review voor de route:"/>
+            <Entry x:Name="eReview" Text="{Binding route_review}"/>
+        </StackLayout>
+        <StackLayout>
+            <Button x:Name="btnOpslaanRoute" Text="Opslaan" Clicked="btnOpslaanRoute_Clicked"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="LightBlue"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

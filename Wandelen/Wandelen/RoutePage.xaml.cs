@@ -17,7 +17,6 @@ namespace Wandelen
         public RoutePage()
         {
             InitializeComponent();
-            //Misschien gebruik maken van buttons?
         }
 
         private void voorgestelderoutes_clicked(object sender, EventArgs e)
@@ -28,7 +27,7 @@ namespace Wandelen
 
         private void RouteKiezen_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new EigenRouteKiezenPage());
         }
 
         private void RouteMaken_Clicked(object sender, EventArgs e)
