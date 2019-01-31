@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wandelen.Models
 {
-    class Kaart
+    class Coördinaat
     {
     }
 }

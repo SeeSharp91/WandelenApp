@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps ="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Wandelen.EigenRoutePage">
+    <ContentPage.Content BackgroundColor="AliceBlue">
+        <StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand" BackgroundColor="AliceBlue">
+                <maps:Map x:Name="locationsMap" HeightRequest="350" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="End">
+                <Button x:Name="StartRoute" Text="Start Route" 
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="LightBlue"/>
+                <Button x:Name="StopRoute"  Text="Stop Route" 
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="LightBlue"/>
+                <Button x:Name="Opslaan"  Text="Opslaan" 
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="LightBlue"/>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>    
+</ContentPage>
