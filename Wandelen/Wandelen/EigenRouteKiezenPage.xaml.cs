@@ -74,7 +74,7 @@ namespace Wandelen
                 SQLiteCommand cmd = new SQLiteCommand(conn);
                 cmd.CommandText = query;
             }
-            DisplayAlert("Success", "Route succesfully deletet.", "ok");
+            DisplayAlert("Success", "Route succesfully deleted.", "ok");
             RefreshData();
         }
     }
