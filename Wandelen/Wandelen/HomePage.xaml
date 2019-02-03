@@ -4,7 +4,6 @@
             xmlns:local="clr-namespace:Wandelen"
             x:Class="Wandelen.HomePage">
 
-    <local:AccountPage Title="Mijn Account"/>
     <local:KaartPage Title="Kaart"/>
     <local:POIPage Title="Bezienswaardigheden"/>
     <local:RoutePage Title="Routes"/>

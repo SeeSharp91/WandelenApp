@@ -18,11 +18,11 @@ namespace Wandelen
     {
 
         // initialiseren benodigde elementen
+        private Label _welkomLabel;
         private Entry _emailEntry;
         private Entry _wachtwoordEntry;
         private Button _loginButton;
         private Button _accountAanmakenButton;
-        private Button testb;
         //Database locatie
         string _dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "WandelappDB.db3");
         
@@ -32,6 +32,12 @@ namespace Wandelen
             //nieuw stacklayout object instantiëren
             this.Title = "Wandel App";
             StackLayout stacklayout = new StackLayout();
+            stacklayout.Margin = 20;
+
+            //welkom label
+            _welkomLabel = new Label();
+            _welkomLabel.Text = "Maak een account aan om gebruik te maken van de nieuwe app!";
+            stacklayout.Children.Add(_welkomLabel);
 
             //email entry
             _emailEntry = new Entry();
@@ -58,11 +64,6 @@ namespace Wandelen
             _accountAanmakenButton.Clicked += _accountAanmakenButton_Clicked;
             stacklayout.Children.Add(_accountAanmakenButton);
 
-            testb = new Button();
-            testb.Text = "testb";
-            testb.Clicked += testb_Clicked;
-            stacklayout.Children.Add(testb);
-
             //geef de content weer
             Content = stacklayout;
         }
@@ -78,7 +79,7 @@ namespace Wandelen
             }
             else
             {
-                await DisplayAlert("Ongeldige gegevens probeer het opnieuw!", "test", "ok");
+                await DisplayAlert("Ongeldige gegevens probeer het opnieuw!", "login fout", "ok");
             }
 
         }
@@ -107,12 +108,6 @@ namespace Wandelen
         private void _accountAanmakenButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AccountPage());
-        }
-
-        //knop om te kijken of entries (nieuwe accounts) daadwerkelijk aangemaakt worden - wordt verwijderd bij oplevering
-        private void testb_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new test());
         }
     }
 }
