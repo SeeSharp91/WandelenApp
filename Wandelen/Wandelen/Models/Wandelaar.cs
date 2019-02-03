@@ -14,10 +14,10 @@ namespace Wandelen.Models
         [NotNull] public string gebruikersnaam { get; set; }
         [NotNull] public string email { get; set; }
         [NotNull] public string wachtwoord { get; set; }
-        //public string straatnaam { get; set; }
-        //public string huisnummer { get; set; }
-        //public string woonplaats { get; set; }
-        //public string postcode { get; set; }
+        public string straatnaam { get; set; }
+        public string huisnummer { get; set; }
+        public string woonplaats { get; set; }
+        public string postcode { get; set; }
 
     }
 }

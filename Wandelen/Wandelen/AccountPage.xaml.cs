@@ -11,7 +11,6 @@ using Xamarin.Forms.Xaml;
 
 namespace Wandelen
 {
-    //[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AccountPage : ContentPage
 	{
         //initialiseren benodigde elementen
@@ -20,10 +19,10 @@ namespace Wandelen
         private Entry _gebruikersnaamEntry;
         private Entry _emailEntry;
         private Entry _wachtwoordEntry;
-        //private Entry _straatnaamEntry;
-        //private Entry _huisnummerEntry;
-        //private Entry _woonplaatsEntry;
-        //private Entry _postcodeEntry;
+        private Entry _straatnaamEntry;
+        private Entry _huisnummerEntry;
+        private Entry _woonplaatsEntry;
+        private Entry _postcodeEntry;
         private Button _accountopslaanButton;
 
         string _dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "WandelappDB.db3");
@@ -60,25 +59,25 @@ namespace Wandelen
             _wachtwoordEntry.Placeholder = "Wachtwoord";
             stacklayout.Children.Add(_wachtwoordEntry);
 
-            //_straatnaamEntry = new Entry();
-            //_straatnaamEntry.Keyboard = Keyboard.Text;
-            //_straatnaamEntry.Placeholder = "Straatnaam";
-            //stacklayout.Children.Add(_straatnaamEntry);
+            _straatnaamEntry = new Entry();
+            _straatnaamEntry.Keyboard = Keyboard.Text;
+            _straatnaamEntry.Placeholder = "Straatnaam";
+            stacklayout.Children.Add(_straatnaamEntry);
 
-            //_huisnummerEntry = new Entry();
-            //_huisnummerEntry.Keyboard = Keyboard.Text;
-            //_huisnummerEntry.Placeholder = "Huisnummer";
-            //stacklayout.Children.Add(_huisnummerEntry);
+            _huisnummerEntry = new Entry();
+            _huisnummerEntry.Keyboard = Keyboard.Text;
+            _huisnummerEntry.Placeholder = "Huisnummer";
+            stacklayout.Children.Add(_huisnummerEntry);
 
-            //_woonplaatsEntry = new Entry();
-            //_woonplaatsEntry.Keyboard = Keyboard.Text;
-            //_woonplaatsEntry.Placeholder = "Woonplaats";
-            //stacklayout.Children.Add(_woonplaatsEntry);
+            _woonplaatsEntry = new Entry();
+            _woonplaatsEntry.Keyboard = Keyboard.Text;
+            _woonplaatsEntry.Placeholder = "Woonplaats";
+            stacklayout.Children.Add(_woonplaatsEntry);
 
-            //_postcodeEntry = new Entry();
-            //_postcodeEntry.Keyboard = Keyboard.Text;
-            //_postcodeEntry.Placeholder = "Postcode";
-            //stacklayout.Children.Add(_postcodeEntry);
+            _postcodeEntry = new Entry();
+            _postcodeEntry.Keyboard = Keyboard.Text;
+            _postcodeEntry.Placeholder = "Postcode";
+            stacklayout.Children.Add(_postcodeEntry);
 
             _accountopslaanButton = new Button();
             _accountopslaanButton.Text = "Creëer Account";
@@ -104,10 +103,10 @@ namespace Wandelen
                 gebruikersnaam = _gebruikersnaamEntry.Text,
                 email = _emailEntry.Text,
                 wachtwoord = _wachtwoordEntry.Text,
-                //straatnaam = _straatnaamEntry.Text,
-                //huisnummer = _huisnummerEntry.Text,
-                //woonplaats = _woonplaatsEntry.Text,
-                //postcode = _postcodeEntry.Text,
+                straatnaam = _straatnaamEntry.Text,
+                huisnummer = _huisnummerEntry.Text,
+                woonplaats = _woonplaatsEntry.Text,
+                postcode = _postcodeEntry.Text,
             };
             database.Insert(wandelaar);
             await DisplayAlert(null, "Account succesvol aangemaakt" + " opgeslagen ", "Ok");
