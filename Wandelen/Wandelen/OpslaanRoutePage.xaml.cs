@@ -18,16 +18,22 @@ namespace Wandelen
         {
             try
             {
+                Route newRoute = new Route()
+                {
+                    route_naam = eRouteNaam.Text
+                };
+
                 using (SQLiteConnection conn = new SQLiteConnection(App.DBLocation))
                 {
                     conn.CreateTable<Route>();
-                    var newRoute = new Route();
-                    newRoute.route_naam = "Mijn eigen Route";
-                    conn.Insert(newRoute);
-                    newRoute.route_review = "Beste route ooit! Enorm genoten van alle flora en fauna.";
-                    conn.Insert(newRoute);
-                    newRoute = new Route();
-                }
+                    int rows = conn.Insert(newRoute);
+
+                    if (rows > 0)
+                        DisplayAlert("Success", "Route succesfully added.", "ok");
+                        
+                    else
+                        DisplayAlert("Failure", "Failed to add route", "ok");
+                }            
             }
             catch (System.Exception)
             {

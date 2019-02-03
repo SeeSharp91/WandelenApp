@@ -2,12 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wandelen.EigenRouteKiezenPage">
-   
-    <ListView x:Name="routeListview">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding route_naam}"/>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <ContentPage.Content  BackgroundColor="AliceBlue">
+        <StackLayout>
+            <StackLayout>
+                <ListView x:Name="routeListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding route_naam}"/>                            
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout VerticalOptions="End">
+                <Button x:Name="btnDelete" Text="Route Verwijderen" Clicked="btnDelete_Clicked"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="LightBlue"/>
+            </StackLayout>        
+        </StackLayout>        
+    </ContentPage.Content>   
 </ContentPage>

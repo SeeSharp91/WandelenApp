@@ -6,20 +6,20 @@
     <ContentPage.Content BackgroundColor="AliceBlue">
         <StackLayout>
             <StackLayout VerticalOptions="StartAndExpand" BackgroundColor="AliceBlue">
-                <maps:Map x:Name="locationsMap" HeightRequest="350" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <maps:Map x:Name="locationsMap" MapType="Street"
+                          HeightRequest="350" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
             </StackLayout>
             <StackLayout VerticalOptions="End">
-                <Button x:Name="StartRoute" Text="Start Route" Clicked="StartRoute_Clicked" 
+                <Button x:Name="btnStartRoute" Text="Start Route" Clicked="btnStartRoute_Clicked" 
                         HorizontalOptions="FillAndExpand"
                         BackgroundColor="LightBlue"/>
-                <Button x:Name="StopRoute"  Text="Stop Route" Clicked="StopRoute_Clicked" 
+                <Button x:Name="btnStopRoute"  Text="Stop Route" Clicked="btnStopRoute_Clicked" 
                         HorizontalOptions="FillAndExpand"
                         BackgroundColor="LightBlue"/>
                 <Button x:Name="btnOpslaan"  Text="Opslaan" Clicked="Opslaan_Clicked"
                         HorizontalOptions="FillAndExpand"
                         BackgroundColor="LightBlue"/>
             </StackLayout>
-        </StackLayout>
-        
+        </StackLayout>        
     </ContentPage.Content>    
 </ContentPage>

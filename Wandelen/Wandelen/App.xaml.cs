@@ -22,6 +22,14 @@ namespace Wandelen
             RouteManager = new RouteItemsManager(new RestService());
             MainPage = new NavigationPage(new LoginPage());
         }
+        public App(string databaseLocation)
+        {
+            InitializeComponent();
+
+            MainPage = new NavigationPage(new MainPage());
+
+            DBLocation = databaseLocation;
+        }
 
         protected override void OnStart()
         {
